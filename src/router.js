@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Index from './views/Index'
+import SysLog from './views/system/sys-log'
 
 Vue.use(Router)
 
@@ -10,8 +12,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'Index',
+      component: Index,
+      redirect: '/home',
+      children: [
+        {
+          path: 'home',
+          component: Home
+        }, {
+          path: 'log',
+          component: SysLog
+        }
+      ]
+
     },
     {
       path: '/about',
