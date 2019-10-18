@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Index from './views/Index'
-import SysLog from './views/system/sys-log'
+import SysLog from './views/system/sys-log';
+import EditTable from './views/table/edit-table';
 
 Vue.use(Router)
 
@@ -19,10 +20,15 @@ export default new Router({
         {
           path: 'home',
           component: Home
-        }, {
+        },
+        {
           path: 'log',
           component: SysLog
-        }
+        },
+        {
+          path: 'edit-table',
+          component: EditTable
+        },
       ]
 
     },
