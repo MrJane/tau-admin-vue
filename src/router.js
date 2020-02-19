@@ -4,6 +4,9 @@ import Home from './views/Home.vue'
 import Index from './views/Index'
 import SysLog from './views/system/sys-log';
 import EditTable from './views/table/edit-table';
+import Test from './views/test/test.vue'
+import Preview from './views/preview';
+import Date from './views/Date/Date'
 
 Vue.use(Router)
 
@@ -29,6 +32,18 @@ export default new Router({
           path: 'edit-table',
           component: EditTable
         },
+        {
+          path: 'test',
+          component: Test
+        },
+        {
+          path: 'preview',
+          component: Preview
+        },
+        {
+          path: 'date',
+          component: Date,
+        }
       ]
 
     },
